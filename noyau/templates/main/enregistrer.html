@@ -1,0 +1,16 @@
+{% extends "main/header.html" %}
+{% block content %}
+<html lang="fr">
+
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button class="btn" style="background-color:orchid;
+        color: rgb(0, 255, 0)" type="submit" submit">enregistrer</button> 
+
+    </form>
+
+</html>
+si vous avez déjà un compte, <a href="/login">"><strong>login </strong></a>
+
+{% endblock %}

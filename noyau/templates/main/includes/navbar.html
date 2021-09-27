@@ -1,0 +1,15 @@
+<nav>
+    <div class="nav-wrapper">
+        <a href="/" class="brand-logo">Films</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/">Page Principal</a></li>
+            {% if user.is_authenticated %}
+            <li><a href="/account">{{user.username}}</a></li>
+            <li><a href="/logout">logout</a></li>
+            {% else %}
+            <li><a href="/enregistrer">Enregistrer</a></li>
+            <li><a href="/page_de_connexion">Page_de_connexion</a></li>
+            {% endif %}
+        </ul>
+    </div>
+</nav>
